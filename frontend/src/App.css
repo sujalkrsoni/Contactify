@@ -1,0 +1,93 @@
+.main {
+  background: url(../public/bg.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-position: right;
+  background-attachment: fixed;
+}
+.shade {
+  background-color: rgba(0, 0, 0, 0.252);
+  min-height: 100vh;
+}
+.login-form-div {
+  margin-left: 200px;
+  margin-top: 150px;
+}
+.register-form-div {
+  margin-left: 150px;
+  margin-top: 50px;
+}
+.card {
+  box-shadow: 3px 3px 5px black;
+  background-color: #ffffffdf !important;
+}
+.card:hover {
+  transform: scale(1.01);
+}
+.nav-item{
+  margin-left: 3rem;
+}
+.active-link {
+  border-bottom: 3px solid rgb(0, 0, 0) !important;
+  margin: 0;
+}
+
+@media (orientation: portrait) {
+  /* Styles for portrait mode */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    overflow-x: hidden;
+  } 
+  .active-link {
+    border-bottom: 3px solid rgb(0, 0, 0) !important;
+    margin: 0;
+  }
+  .nav-item{
+    margin-left: 0;
+  }
+  .hero-left {
+    margin-left: 0.3rem !important;
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+  }
+  .hero-left > div {
+    margin-left: 0 !important;
+    font-size: 20px !important;
+  }
+  #mainLeftContent {
+    overflow-x: hidden;
+    margin: 0 0 0 0.5rem !important;
+    padding: 0 I !important;
+  }
+  #mainLeftContent p {
+    font-size: 1rem !important;
+  }
+  #card {
+    margin: 0.5rem 0 !important;
+  }
+  .register-form-div {
+    margin: 5rem 0 0 1.2rem !important;
+    padding: 0 !important;
+    width: 20rem !important;
+  }
+  .register-form-div dl,
+  .login-form dl {
+    width: 10rem I !important;
+    overflow: hidden;
+  }
+  .login-form-div {
+    margin-top: 5rem;
+  }
+  .login-form {
+    margin: 0 0 0 1.2rem !important;
+    width: 20rem !important;
+  }
+  .login-form h2 {
+    font-size: 1.5rem !important;
+  }
+}
