@@ -46,8 +46,17 @@
     border-bottom: 3px solid rgb(0, 0, 0) !important;
     margin: 0;
   }
+  .main{
+    background-attachment: fixed;
+  }
+  .navbar-brand{
+    margin-left: -2rem;
+  }
+  .navbar-toggler{
+    margin-right: -2rem;
+  }
   .nav-item{
-    margin-left: 0;
+    margin-left: -2rem;
   }
   .hero-left {
     margin-left: 0.3rem !important;
@@ -61,11 +70,12 @@
   }
   #mainLeftContent {
     overflow-x: hidden;
-    margin: 0 0 0 0.5rem !important;
+    margin: 7vh 0 0 1rem !important;
     padding: 0 I !important;
   }
   #mainLeftContent p {
-    font-size: 1rem !important;
+    text-shadow: 0.5px 0.5px 2px rgb(255, 255, 255);
+    font-size: 1.5rem !important;
   }
   #card {
     margin: 0.5rem 0 !important;

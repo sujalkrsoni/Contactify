@@ -6,6 +6,7 @@ import { ToastContainer } from "react-toastify";
 import * as bootstrap from "bootstrap";
 import axios from "axios";
 import "../App.css";
+import { baseUrl } from "../url";
 
 export function Dashboard() {
   // these name, phone, email for updating form into server
@@ -26,7 +27,7 @@ export function Dashboard() {
       if (token && userId) {
         try {
           const response = await axios.get(
-            `http://localhost:5000/contacts/${userId}`,
+            `${baseUrl}/contacts/${userId}`,
             {
               headers: {
                 Authorization: token, // Make sure to add 'Bearer' prefix for the token
@@ -51,7 +52,7 @@ export function Dashboard() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/addcontact/${userId}`,
+        `${baseUrl}/addcontact/${userId}`,
         {
           method: "POST",
           headers: {
@@ -88,7 +89,7 @@ export function Dashboard() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/editcontact/${editId}`,
+        `${baseUrl}/editcontact/${editId}`,
         {
           method: "PUT",
           headers: {
@@ -121,7 +122,7 @@ export function Dashboard() {
     const token = localStorage.getItem("token");
 
     try {
-      await axios.delete(`http://localhost:5000/deletecontact/${id}`, {
+      await axios.delete(`${baseUrl}/deletecontact/${id}`, {
         headers: {
           Authorization: token,
         },

@@ -3,6 +3,7 @@ import { Button, TextField } from "@mui/material";
 import { useNavigate, Link } from "react-router-dom";
 import { handleError, handleSuccess } from "../utils";
 import { ToastContainer } from "react-toastify";
+import { baseUrl } from "../url";
 
 export function Login() {
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ export function Login() {
       handleError("Password atleast 4 characters");
     }
     try {
-      const response = await fetch(`http://localhost:5000/login`, {
+      const response = await fetch(`${baseUrl}/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ userName, password }),

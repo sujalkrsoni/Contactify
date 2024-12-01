@@ -3,6 +3,7 @@ import { Button, TextField } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import { handleError, handleSuccess } from "../utils";
 import { ToastContainer } from "react-toastify";
+import { baseUrl } from "../url";
 
 export function Register() {
   const navigate = useNavigate();
@@ -28,7 +29,7 @@ export function Register() {
     }
 
     try {
-      const response = await fetch(`http://localhost:5000/register`, {
+      const response = await fetch(`${baseUrl}/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(userData),
