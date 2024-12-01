@@ -141,7 +141,7 @@ export function Dashboard() {
   };
 
   return (
-    <div className="ms-5 mt-5">
+    <div className="ms-5 mt-5" id="dashboard-container">
       <h1>Welcome to the Dashboard!</h1>
       <ToastContainer />
       <button

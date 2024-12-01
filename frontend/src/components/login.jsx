@@ -56,6 +56,7 @@ export function Login() {
   return (
     <div className="d-flex flex-column login-form-div">
       <form
+        id="login-form"
         className="form-control login-form p-5"
         style={{ width: "400px" }}
         onSubmit={handleSubmit}

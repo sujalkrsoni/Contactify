@@ -57,6 +57,7 @@ export function Register() {
     <div>
       <form
         onSubmit={handleSubmit}
+        id="register-form-div"
         className="register-form-div form-control p-5"
         style={{ width: "400px" }}
       >
@@ -104,7 +105,7 @@ export function Register() {
           </Button>
         </dl>
         <span>
-          Already have an Account ?<Link>Login</Link>
+          Already have an Account ?<Link to="/login">Login</Link>
         </span>
       </form>
       <ToastContainer />
